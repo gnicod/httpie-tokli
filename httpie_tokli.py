@@ -6,6 +6,7 @@ __version__ = '0.1'
 __author__ = 'Gaetan Nicod'
 __licence__ = 'MIT Licence'
 
+
 class TokliAuth:
     def __init__(self, name):
         self.name = name
@@ -16,6 +17,7 @@ class TokliAuth:
         access_token = token['access_token']
         r.headers['Authorization'] = 'Bearer {}'.format(access_token)
         return r
+
 
 class TokliPlugin(AuthPlugin):
     name = 'Tokli'
